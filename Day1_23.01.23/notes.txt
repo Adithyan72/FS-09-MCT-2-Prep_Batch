@@ -118,10 +118,84 @@ public class Solution {
     }
 }
 
+Updated query 1-----------------------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void UpdateQ(int[]arr,int left,int right,int target){
+        for(int idx=0;idx<arr.length;idx++){
+            if(idx>=left && idx<=right){
+                arr[idx]=target;
+            }
+             System.out.print(arr[idx]+" ");
+           }
+        }
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[]arr=new int[n];
+        for(int idx=0;idx<arr.length;idx++){
+            arr[idx]=scn.nextInt();
+        }
+        int left = scn.nextInt();
+        int right = scn.nextInt();
+        int target = scn.nextInt();
+        UpdateQ(arr,left,right,target);
+    }
+}
 
 
+Print First Vowel occurrence-----------------------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.next().charAt(0);
+        }
+        for(int i=0;i<n;i++){
+            if(arr[i]=='a' || arr[i]=='e' || arr[i]=='i' || arr[i]=='o' || arr[i]=='u'){
+                System.out.println(i);
+                return;
+            }
+        }
+    }
+}
 
 
+Print First NON MATCHING NUMBER-----------------------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();        
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        int[] brr = new int[n];
+        for(int i=0;i<n;i++){
+            brr[i] = sc.nextInt();
+            if(brr[i] != arr[i]){
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+}
 
 
 
